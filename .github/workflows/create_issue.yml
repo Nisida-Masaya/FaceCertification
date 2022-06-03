@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Jira Example
+    name: Create Issue
     if: github.event.action == 'opened'
     steps:
     - name: Login
@@ -22,7 +22,7 @@ jobs:
       uses: atlassian/gajira-create@v2.0.1
       with:
         # プロジェクトキーを指定
-        project: AC
+        project: PSVX
         # 課題タイプを指定
         issuetype: Task
         # issuesのタイトルが要約になるように設定
